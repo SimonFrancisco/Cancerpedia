@@ -1,4 +1,4 @@
-package com.example.cancerpedia.room
+package com.example.cancerpedia.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase

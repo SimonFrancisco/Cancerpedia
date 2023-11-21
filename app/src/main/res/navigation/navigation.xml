@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/cancerFragment">
+
+    <fragment
+        android:id="@+id/cancerFragment"
+        android:name="com.example.cancerpedia.cancerscreens.CancerFragment"
+        android:label="fragment_cancer"
+        tools:layout="@layout/fragment_cancer" >
+        <action
+            android:id="@+id/action_cancerFragment_to_cancerDescriptionFragment"
+            app:destination="@id/cancerDescriptionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/readingFragment"
+        android:name="com.example.cancerpedia.cancerscreens.ReadingFragment"
+        android:label="fragment_reading"
+        tools:layout="@layout/fragment_reading" >
+        <action
+            android:id="@+id/action_readingFragment_to_cancerDescriptionFragment"
+            app:destination="@id/cancerDescriptionFragment"
+            app:popUpTo="@id/cancerDescriptionFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/cancerDescriptionFragment"
+        android:name="com.example.cancerpedia.cancerscreens.CancerDescriptionFragment"
+        android:label="fragment_cancer_description"
+        tools:layout="@layout/fragment_cancer_description" >
+        <action
+            android:id="@+id/action_cancerDescriptionFragment_to_readingFragment"
+            app:destination="@id/readingFragment" />
+        <action
+            android:id="@+id/action_cancerDescriptionFragment_to_cancerFragment"
+            app:destination="@id/cancerFragment"
+            app:popUpTo="@id/cancerFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
