@@ -5,5 +5,5 @@ import androidx.room.RoomDatabase
 
 @Database(entities = [Cancer::class], exportSchema = false, version = 1)
 abstract class CancerDataBase: RoomDatabase() {
-    abstract fun getDao(): Dao
+    abstract fun getDao(): CancerDatabaseDao
 }

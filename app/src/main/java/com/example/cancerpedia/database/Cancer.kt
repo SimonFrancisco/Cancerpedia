@@ -3,15 +3,17 @@ package com.example.cancerpedia.database
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-// TODO: vars 
 @Entity(tableName = "cancer")
-class Cancer(
-    var img: String,
-    var title: String,
-    var des: String,
-    var ing: String,
-    var category: String) {
-    @JvmField
+data class Cancer(
     @PrimaryKey(autoGenerate = true)
-    var uid=0
+    var cancerId:Int,
+    var name: String,
+    var def: String,
+    var types: String,
+    var sympt: String,
+    var stage:String,
+    var cause:String,
+    var diagn:String,
+    var treat:String) {
+
 }
