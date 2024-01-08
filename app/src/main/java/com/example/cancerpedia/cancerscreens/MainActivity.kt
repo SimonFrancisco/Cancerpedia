@@ -10,10 +10,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         //Calling SlashScreen - Everything is in res-themes and AndroidManifest
         //Duration of SplashScreen
-        Thread.sleep(3000)
+        Thread.sleep(1000)
         installSplashScreen()
-
-
         setContentView(R.layout.activity_main)
     }
 }

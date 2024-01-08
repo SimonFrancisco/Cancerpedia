@@ -6,7 +6,7 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "cancer")
 data class Cancer(
     @PrimaryKey(autoGenerate = true)
-    var cancerId:Int,
+    var id:Int,
     var name: String,
     var def: String,
     var types: String,

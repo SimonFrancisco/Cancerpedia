@@ -2,9 +2,39 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="cancer"
+            type="com.example.cancerpedia.database.Cancer" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/purple">
+        <ImageView
+            android:id="@+id/cancer_image"
+            android:layout_width="90dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/cancer"/>
+
+        <TextView
+            android:id="@+id/cancer_string"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginStart="15dp"
+            android:text="@string/cancer_text"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="@id/cancer_image"
+            app:layout_constraintStart_toStartOf="@id/cancer_image"
+            app:layout_constraintTop_toBottomOf="@id/cancer_image" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
