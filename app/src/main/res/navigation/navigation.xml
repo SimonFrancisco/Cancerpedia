@@ -8,8 +8,8 @@
     <fragment
         android:id="@+id/cancerFragment"
         android:name="com.example.cancerpedia.cancerscreens.CancerFragment"
-        android:label="fragment_cancer"
-        tools:layout="@layout/fragment_cancer" >
+        android:label="Cancerpedia"
+        tools:layout="@layout/fragment_cancer">
         <action
             android:id="@+id/action_cancerFragment_to_cancerDescriptionFragment"
             app:destination="@id/cancerDescriptionFragment" />
@@ -17,19 +17,22 @@
     <fragment
         android:id="@+id/readingFragment"
         android:name="com.example.cancerpedia.cancerscreens.ReadingFragment"
-        android:label="fragment_reading"
-        tools:layout="@layout/fragment_reading" >
+        android:label="Reading"
+        tools:layout="@layout/fragment_reading">
         <action
             android:id="@+id/action_readingFragment_to_cancerDescriptionFragment"
             app:destination="@id/cancerDescriptionFragment"
             app:popUpTo="@id/cancerDescriptionFragment"
             app:popUpToInclusive="true" />
+        <argument
+            android:name="currentCancer"
+            app:argType="com.example.cancerpedia.database.Cancer" />
     </fragment>
     <fragment
         android:id="@+id/cancerDescriptionFragment"
         android:name="com.example.cancerpedia.cancerscreens.CancerDescriptionFragment"
-        android:label="fragment_cancer_description"
-        tools:layout="@layout/fragment_cancer_description" >
+        android:label="Cancer"
+        tools:layout="@layout/fragment_cancer_description">
         <action
             android:id="@+id/action_cancerDescriptionFragment_to_readingFragment"
             app:destination="@id/readingFragment" />

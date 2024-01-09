@@ -9,6 +9,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.cancerpedia.R
 import com.example.cancerpedia.databinding.FragmentCancerBinding
 
@@ -30,11 +31,12 @@ class CancerFragment : Fragment() {
         val adapter = CancerAdapter()
         val recyclerView = binding.cancerList
         recyclerView.adapter = adapter
-        val manager = GridLayoutManager(activity,2)
+        val manager = GridLayoutManager(activity,2,LinearLayoutManager.VERTICAL,false)
         binding.cancerList.layoutManager = manager
-        cancerViewModel.getAllCancer.observe(viewLifecycleOwner, Observer {cancer->
+        // Observing data in viewModel
+        cancerViewModel.getAllCancer.observe(viewLifecycleOwner) { cancer ->
             adapter.setData(cancer)
-        })
+        }
 
         return binding.root
     }
