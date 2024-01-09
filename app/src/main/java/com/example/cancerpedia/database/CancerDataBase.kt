@@ -8,7 +8,6 @@ import androidx.room.RoomDatabase
 @Database(entities = [Cancer::class], exportSchema = false, version = 1)
 abstract class CancerDataBase: RoomDatabase() {
     abstract fun cancerDao(): CancerDatabaseDao
-   //abstract val cancerDatabaseDao : CancerDatabaseDao
     companion object{
         @Volatile
         private var INSTANCE:CancerDataBase? = null
@@ -21,7 +20,7 @@ abstract class CancerDataBase: RoomDatabase() {
                         CancerDataBase::class.java,
                         "cancer_database")
                         .fallbackToDestructiveMigration()
-                        .createFromAsset("database/cancer.db")
+                        .createFromAsset("database/cancer.db") // accessing existing database
                         .build()
                     INSTANCE = instance
 
