@@ -24,7 +24,7 @@ class CancerFragment : Fragment() {
         val binding: FragmentCancerBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_cancer,container, false)
 
-        cancerViewModel =  ViewModelProvider(this).get(CancerViewModel::class.java)
+        cancerViewModel = ViewModelProvider(this)[CancerViewModel::class.java]
         binding.cancerViewModel = cancerViewModel
 
         //Recycler view

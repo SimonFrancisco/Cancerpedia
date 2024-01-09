@@ -38,7 +38,7 @@ class CancerAdapter:RecyclerView.Adapter<CancerAdapter.MyViewHolder>() {
             0 -> R.drawable.throat_cancer
             1 -> R.drawable.breast_cancer
             2 -> R.drawable.oral_cancer
-            3 -> R.drawable.cervical_cancer
+            3 -> R.drawable.stomach_cancer
             4 -> R.drawable.colon_cancer
             5 -> R.drawable.bone_cancer
             6 -> R.drawable.lung_cancer
