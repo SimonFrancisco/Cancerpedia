@@ -1,4 +1,4 @@
-package com.example.cancerpedia.cancerscreens
+package com.example.cancerpedia.cancerscreens.cancerpedia
 
 import androidx.lifecycle.LiveData
 import com.example.cancerpedia.database.Cancer

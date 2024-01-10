@@ -1,4 +1,4 @@
-package com.example.cancerpedia.cancerscreens
+package com.example.cancerpedia.cancerscreens.cancerdescription
 
 import android.os.Parcelable
 import kotlinx.parcelize.Parcelize

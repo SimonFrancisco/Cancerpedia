@@ -1,6 +1,5 @@
-package com.example.cancerpedia.cancerscreens
+package com.example.cancerpedia.cancerscreens.cancerdescription
 
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,8 +9,6 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cancerpedia.R
-import com.example.cancerpedia.database.Cancer
-
 class CancerDescriptionAdapter(private var cancerDescr: ArrayList<CancerDescriptionData>):RecyclerView.Adapter<CancerDescriptionAdapter.ViewHolderClass>() {
 
     class ViewHolderClass(itemView: View):RecyclerView.ViewHolder(itemView) {
@@ -35,7 +32,10 @@ class CancerDescriptionAdapter(private var cancerDescr: ArrayList<CancerDescript
         holder.descrText.text = currentItem.descrName
 
         holder.descrLayout.setOnClickListener{
-            val readAction = CancerDescriptionFragmentDirections.actionCancerDescriptionFragmentToReadingFragment(currentItem)
+            val readAction =
+                CancerDescriptionFragmentDirections.actionCancerDescriptionFragmentToReadingFragment(
+                    currentItem
+                )
             holder.itemView.findNavController().navigate(readAction)
         }
 

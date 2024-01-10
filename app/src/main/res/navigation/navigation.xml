@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/cancerFragment"
-        android:name="com.example.cancerpedia.cancerscreens.CancerFragment"
+        android:name="com.example.cancerpedia.cancerscreens.cancerpedia.CancerFragment"
         android:label="Cancerpedia"
         tools:layout="@layout/fragment_cancer">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/readingFragment"
-        android:name="com.example.cancerpedia.cancerscreens.ReadingFragment"
+        android:name="com.example.cancerpedia.cancerscreens.cancerread.ReadingFragment"
         tools:layout="@layout/fragment_reading">
         <action
             android:id="@+id/action_readingFragment_to_cancerDescriptionFragment"
@@ -25,17 +25,15 @@
             app:popUpToInclusive="true" />
         <argument
             android:name="currentReading"
-            app:argType="com.example.cancerpedia.cancerscreens.CancerDescriptionData" />
+            app:argType="com.example.cancerpedia.cancerscreens.cancerdescription.CancerDescriptionData" />
     </fragment>
     <fragment
         android:id="@+id/cancerDescriptionFragment"
-        android:name="com.example.cancerpedia.cancerscreens.CancerDescriptionFragment"
-        android:label="Cancer"
+        android:name="com.example.cancerpedia.cancerscreens.cancerdescription.CancerDescriptionFragment"
         tools:layout="@layout/fragment_cancer_description">
         <action
             android:id="@+id/action_cancerDescriptionFragment_to_readingFragment"
-            app:destination="@id/readingFragment" >
-        </action>
+            app:destination="@id/readingFragment"></action>
         <action
             android:id="@+id/action_cancerDescriptionFragment_to_cancerFragment"
             app:destination="@id/cancerFragment"

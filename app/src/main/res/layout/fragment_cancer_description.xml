@@ -4,7 +4,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".cancerscreens.CancerFragment"
+        tools:context=".cancerscreens.cancerpedia.CancerFragment"
         android:background="@color/purple">
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/cancer_description"

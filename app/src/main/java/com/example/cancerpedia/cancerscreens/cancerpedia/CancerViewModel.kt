@@ -1,4 +1,4 @@
-package com.example.cancerpedia.cancerscreens
+package com.example.cancerpedia.cancerscreens.cancerpedia
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
