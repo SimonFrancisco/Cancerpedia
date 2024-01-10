@@ -6,6 +6,12 @@
         android:layout_height="match_parent"
         tools:context=".cancerscreens.CancerFragment"
         android:background="@color/purple">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cancer_description"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="12dp"/>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 

@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.RelativeLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.example.cancerpedia.R
@@ -14,10 +15,12 @@ import com.example.cancerpedia.database.Cancer
 class CancerAdapter:RecyclerView.Adapter<CancerAdapter.MyViewHolder>() {
 
     private var cancerList = emptyList<Cancer>()
+
     class MyViewHolder(itemView:View):RecyclerView.ViewHolder(itemView){
         val cancerImage:ImageView = itemView.findViewById(R.id.cancer_image)
         val cancerTitle:TextView = itemView.findViewById(R.id.cancer_string)
         val cancerLayout:RelativeLayout = itemView.findViewById(R.id.cancerLayout)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -31,6 +34,7 @@ class CancerAdapter:RecyclerView.Adapter<CancerAdapter.MyViewHolder>() {
 
     override fun onBindViewHolder(holder: MyViewHolder, position: Int) {
         val currentCancer = cancerList[position]
+
         //Setting cancer names from data base
         holder.cancerTitle.text = currentCancer.name
         //Setting the pictures according the to the cancer type
@@ -48,8 +52,9 @@ class CancerAdapter:RecyclerView.Adapter<CancerAdapter.MyViewHolder>() {
             else->R.drawable.cancer
         })
         holder.cancerLayout.setOnClickListener{
-            val action = CancerFragmentDirections.actionCancerFragmentToCancerDescriptionFragment()
+            val action = CancerFragmentDirections.actionCancerFragmentToCancerDescriptionFragment(currentCancer)
             holder.itemView.findNavController().navigate(action)
+
         }
 
     }
