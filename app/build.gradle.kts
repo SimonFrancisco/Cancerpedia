@@ -64,6 +64,12 @@ dependencies {
     //Splash Screen
     implementation ("androidx.core:core-splashscreen:1.0.1")
 
+    //JustifiedTextView
+    implementation ("me.biubiubiu.justifytext:library:1.1")
+
+
+
+
 
 
 }

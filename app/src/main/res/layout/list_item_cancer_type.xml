@@ -23,16 +23,18 @@
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
             tools:srcCompat="@drawable/cancer"/>
-        <TextView
-            android:id="@+id/cancer_string"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="19dp"
-            android:layout_below="@id/cancer_image"
-            android:text="@string/cancer_text"
-            android:textSize="24sp"
-            android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/cancer_string"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cancer_image"
+                android:layout_marginStart="19dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/cancer_text"
+                android:textColor="#FFFFFF"
+                android:textSize="24sp"
+                android:textStyle="bold" />
         </RelativeLayout>
     </androidx.cardview.widget.CardView>
 </layout>
