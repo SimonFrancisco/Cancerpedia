@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
@@ -35,6 +36,7 @@ class CancerFragment : Fragment() {
         cancerViewModel.getAllCancer.observe(viewLifecycleOwner) { cancer ->
             adapter.setData(cancer)
         }
+        //(activity as AppCompatActivity).supportActionBar?.title = "tttt"
 
         return binding.root
     }
